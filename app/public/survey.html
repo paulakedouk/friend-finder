@@ -255,8 +255,9 @@
             </div>
         </div>
     </div>
-    <script>
-        $('#submit-btn').on('click', function () {
+    <script type="text/javascript">
+        $('#submit-btn').on('click', function (eveny) {
+            event.preventDefault
             var newMatch =
                 {
                     name: $('#name').val().trim(),
@@ -275,30 +276,11 @@
             var currentURL = window.location.origin;
             // console.log(newMatch);
 
-            $.post(currentURL + "/api/friends", newFriend)
-                .done(function (data) {
-                    var oldFriends = [];
-                    for (var i = 0; i < data.length; i++) {
-                        oldFriends.push(data[i].scores);
-                    }
-                    var score = 0;
-                    var scoreArray = [];
-                    function difference(a, b) { return Math.abs(a - b); }
-                    for (var i = 0; i < oldFriends.length - 1; i++) {
-                        for (var j = 0; j < 10; j++) {
-                            score += difference(oldFriends[i][j], oldFriends[oldFriends.length - 1][j]);
-                        }
-                        scoreArray.push(score);
-                        score = 0;
-                    }
-                    var indexInArray = scoreArray.indexOf(Math.min(...scoreArray));
-                    $("#nameOfMatch").html(data[indexInArray].name);
-                    $("#imageHolder").html(data[indexInArray].photo);
-                    $("#myModal").modal('toggle');
-                });
-            var currentURL = window.location.origin;
-            return false;
-        });
+            $.post("/api/friends", newMatch, function (data) {
+                console.log(data);
+            })
+
+
         })
     </script>
 </body>
