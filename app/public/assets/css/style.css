@@ -17,8 +17,23 @@ img {
   z-index: -1;
 }
 
+.main-area {
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+}
+
+.title {
+  margin: 60px;
+  font-size: 26px;
+}
+
 .btn {
   margin-top: 30px;
-  border: 2px solid red;
-  color: white;
+  padding: 10px 30px;
+}
+
+#submit-btn {
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
