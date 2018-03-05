@@ -49,8 +49,8 @@ module.exports = function(app) {
       friends.push(currentUser);
 
       var result = {
-        friendA: matched,
-        friendB: currentUser
+        match: matched,
+        user: currentUser
       };
       res.json(result);
     }

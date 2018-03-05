@@ -9,7 +9,7 @@ header {
   margin-top: 350px;
 }
 
-img {
+.friends-img {
   position: absolute;
   margin: 0 auto;
   width: 100%;
@@ -36,4 +36,40 @@ img {
 #submit-btn {
   margin-top: 50px;
   margin-bottom: 100px;
+}
+
+.active {
+  background-color: white !important;
+  color: black !important;
+  border: white !important;
+}
+
+/* Modal */
+
+.modal-content {
+  color: black;
+}
+.modal-body h4 {
+  font-size: 2em;
+  text-align: left;
+}
+.modal-header {
+  border-bottom: none;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.modal-title {
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.modal-body {
+  text-align: center;
+  font-weight: 100;
+}
+.modal-body h2 {
+  text-transform: uppercase;
 }
